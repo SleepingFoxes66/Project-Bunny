@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0rdhpix10n5y"
-path="res://.godot/imported/rUINS.png-8958f79b9caaf2aadbeb79dc321c03fe.ctex"
+uid="uid://b35vqfyc1ifkq"
+path="res://.godot/imported/Alice.png-82ce9bde0a7adb86818098317b4e687d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilesets/rUINS.png"
-dest_files=["res://.godot/imported/rUINS.png-8958f79b9caaf2aadbeb79dc321c03fe.ctex"]
+source_file="res://Assets/Char/Alice.png"
+dest_files=["res://.godot/imported/Alice.png-82ce9bde0a7adb86818098317b4e687d.ctex"]
 
 [params]
 

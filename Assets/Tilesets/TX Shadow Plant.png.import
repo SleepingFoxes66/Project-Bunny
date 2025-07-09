@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://i8krw6pxsasq"
-path="res://.godot/imported/TX Plant.png-43d7df76bd11e48e63fd0fc0fe67f754.ctex"
+uid="uid://rjte0jta0mqt"
+path="res://.godot/imported/TX Shadow Plant.png-ad52fca23165f70effdb5bce10cf0b85.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilesets/TX Plant.png"
-dest_files=["res://.godot/imported/TX Plant.png-43d7df76bd11e48e63fd0fc0fe67f754.ctex"]
+source_file="res://Assets/Tilesets/TX Shadow Plant.png"
+dest_files=["res://.godot/imported/TX Shadow Plant.png-ad52fca23165f70effdb5bce10cf0b85.ctex"]
 
 [params]
 
