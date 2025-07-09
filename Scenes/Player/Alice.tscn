@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://nfa3djd82fxt"]
 
-[ext_resource type="Texture2D" uid="uid://b35vqfyc1ifkq" path="res://Char/Alice.png" id="1_bh3ft"]
+[ext_resource type="Texture2D" uid="uid://b35vqfyc1ifkq" path="res://Assets/Char/Alice.png" id="1_hrkn1"]
 
 [sub_resource type="GDScript" id="GDScript_8vtpt"]
 script/source = "extends CharacterBody2D
@@ -13,7 +13,8 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_vector(\"Left\", \"Right\", \"Up\", \"Down\")
 	velocity = direction * speed
 	move_and_slide()
-
+	
+	# Movement Animation
 	if direction != Vector2.ZERO:
 		if abs(direction.x) > abs(direction.y):
 			anim_player.play(\"Left\" if direction.x > 0 else \"Right\")
@@ -21,6 +22,9 @@ func _physics_process(delta: float) -> void:
 			anim_player.play(\"Up\" if direction.y > 0 else \"Down\")
 	else:
 		anim_player.play(\"RESET\")
+
+func helth():
+	pass
 "
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2sxuh"]
@@ -145,7 +149,7 @@ shape = SubResource("RectangleShape2D_2sxuh")
 
 [node name="Alice" type="Sprite2D" parent="."]
 position = Vector2(3, 0.5)
-texture = ExtResource("1_bh3ft")
+texture = ExtResource("1_hrkn1")
 hframes = 4
 vframes = 4
 
