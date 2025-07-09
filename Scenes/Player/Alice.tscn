@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://nfa3djd82fxt"]
+[gd_scene load_steps=10 format=3 uid="uid://nfa3djd82fxt"]
 
 [ext_resource type="Texture2D" uid="uid://b35vqfyc1ifkq" path="res://Assets/Char/Alice.png" id="1_hrkn1"]
 
@@ -19,7 +19,7 @@ func _physics_process(delta: float) -> void:
 		if abs(direction.x) > abs(direction.y):
 			anim_player.play(\"Left\" if direction.x > 0 else \"Right\")
 		else:
-			anim_player.play(\"Up\" if direction.y > 0 else \"Down\")
+			anim_player.play(\"Down\" if direction.y > 0 else \"Up\")
 	else:
 		anim_player.play(\"RESET\")
 
@@ -29,39 +29,6 @@ func helth():
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2sxuh"]
 size = Vector2(5.58823, 3.68127)
-
-[sub_resource type="Animation" id="Animation_bh3ft"]
-resource_name = "Alice"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Alice:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(),
-"transitions": PackedFloat32Array(),
-"update": 1,
-"values": []
-}
-
-[sub_resource type="Animation" id="Animation_y4efa"]
-resource_name = "Down"
-length = 0.6
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Alice:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [12, 13, 14, 15]
-}
 
 [sub_resource type="Animation" id="Animation_2sxuh"]
 resource_name = "Left"
@@ -82,18 +49,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_8vtpt"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Alice:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
-}
 
 [sub_resource type="Animation" id="Animation_b44al"]
 resource_name = "Right"
@@ -112,8 +67,26 @@ tracks/0/keys = {
 "values": [8, 9, 10, 11]
 }
 
-[sub_resource type="Animation" id="Animation_vwqut"]
+[sub_resource type="Animation" id="Animation_y4efa"]
 resource_name = "Up"
+length = 0.6
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Alice:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="Animation" id="Animation_vwqut"]
+resource_name = "Down"
 length = 0.6
 loop_mode = 1
 tracks/0/type = "value"
@@ -131,12 +104,11 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vwqut"]
 _data = {
-&"Alice": SubResource("Animation_bh3ft"),
-&"Down": SubResource("Animation_y4efa"),
+&"Down": SubResource("Animation_vwqut"),
 &"Left": SubResource("Animation_2sxuh"),
 &"RESET": SubResource("Animation_8vtpt"),
 &"Right": SubResource("Animation_b44al"),
-&"Up": SubResource("Animation_vwqut")
+&"Up": SubResource("Animation_y4efa")
 }
 
 [node name="Alice" type="CharacterBody2D"]
@@ -152,6 +124,7 @@ position = Vector2(3, 0.5)
 texture = ExtResource("1_hrkn1")
 hframes = 4
 vframes = 4
+frame = 4
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
